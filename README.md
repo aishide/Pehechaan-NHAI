@@ -1,162 +1,184 @@
-<!-- Animated SVG Header Banner representing Face Verification scanning in Indian Flag hues -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="300" style="background:#090d1a; font-family:'Segoe UI',Roboto,sans-serif; border-radius:12px;">
+<!-- Animated High-Tech HUD Scanner Banner in Indian Flag Accents -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" height="320" style="background:#030712; font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; border-radius:16px; border: 1px solid rgba(255, 255, 255, 0.08);">
   <style>
     @keyframes scan {
-      0% { transform: translateY(0px); opacity: 0.4; }
-      50% { transform: translateY(220px); opacity: 1; }
-      100% { transform: translateY(0px); opacity: 0.4; }
+      0% { transform: translateY(0px); opacity: 0.3; }
+      50% { transform: translateY(200px); opacity: 0.9; }
+      100% { transform: translateY(0px); opacity: 0.3; }
     }
     @keyframes pulse {
-      0% { opacity: 0.2; }
-      50% { opacity: 0.6; }
-      100% { opacity: 0.2; }
+      0% { opacity: 0.2; transform: scale(0.98); }
+      50% { opacity: 0.5; transform: scale(1.02); }
+      100% { opacity: 0.2; transform: scale(0.98); }
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
     .scanner-line {
-      animation: scan 5s ease-in-out infinite;
+      animation: scan 4.5s ease-in-out infinite;
       stroke: url(#laser-grad);
+      filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.8));
     }
-    .grid-bg {
-      stroke: #172554;
-      stroke-width: 0.5;
+    .hud-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.03);
+      stroke-width: 1;
     }
-    .hud-circle {
-      transform-origin: 400px 150px;
-      animation: spin 25s linear infinite;
+    .hud-circle-outer {
+      transform-origin: 400px 140px;
+      animation: spin 30s linear infinite;
+    }
+    .hud-circle-inner {
+      transform-origin: 400px 140px;
+      animation: spin 15s linear infinite reverse;
+    }
+    .pulse-glow {
+      transform-origin: 400px 140px;
+      animation: pulse 3s ease-in-out infinite;
     }
     .flag-saffron { fill: #FF9933; }
     .flag-white { fill: #FFFFFF; }
     .flag-green { fill: #138808; }
-    .text-title { font-weight: 900; font-size: 42px; fill: #ffffff; letter-spacing: 6px; }
-    .text-subtitle { font-size: 13px; fill: #94a3b8; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; }
   </style>
-  
+
   <defs>
     <linearGradient id="laser-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FF9933" />
+      <stop offset="30%" stop-color="#00D2FF" />
       <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#00D2FF" />
       <stop offset="100%" stop-color="#138808" />
     </linearGradient>
     
-    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-      <path d="M 25 0 L 0 0 0 25" fill="none" class="grid-bg"/>
+    <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#1e293b" />
     </pattern>
   </defs>
 
-  <!-- Background grid -->
-  <rect width="800" height="300" fill="url(#grid)" />
-  
-  <!-- Left Side: NHAI / Indian Flag Colors subtle accent -->
-  <rect x="0" y="0" width="8" height="100" class="flag-saffron" />
-  <rect x="0" y="100" width="8" height="100" class="flag-white" />
-  <rect x="0" y="200" width="8" height="100" class="flag-green" />
+  <!-- Dot grid background -->
+  <rect width="800" height="320" fill="url(#dot-grid)" />
 
-  <!-- Animated HUD Circles -->
-  <circle cx="400" cy="150" r="110" fill="none" stroke="rgba(99, 102, 241, 0.15)" stroke-width="1.5" />
-  <circle cx="400" cy="150" r="95" fill="none" stroke="rgba(255, 153, 51, 0.3)" stroke-width="2" stroke-dasharray="15 35" class="hud-circle" />
-  <circle cx="400" cy="150" r="80" fill="none" stroke="#138808" stroke-width="1.5" stroke-dasharray="5 15" opacity="0.6" style="animation: spin 12s linear infinite reverse; transform-origin: 400px 150px;" />
+  <!-- Corner Targeting Reticles -->
+  <path d="M 30,50 L 30,30 L 50,30" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
+  <path d="M 770,50 L 770,30 L 750,30" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
+  <path d="M 30,270 L 30,290 L 50,290" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
+  <path d="M 770,270 L 770,290 L 750,290" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" />
 
-  <!-- Face Silhouette Graphic in the center -->
-  <path d="M400,90 C380,90 365,108 365,135 C365,168 380,190 400,190 C420,190 435,168 435,135 C435,108 420,90 400,90 Z M387,128 C387,124 390,121 394,121 C398,121 401,124 401,128 C401,132 398,135 394,135 C390,135 387,132 387,128 Z M413,128 C413,124 416,121 420,121 C424,121 427,124 427,128 C427,132 424,135 420,135 C416,135 413,132 413,128 Z" fill="none" stroke="rgba(255, 255, 255, 0.35)" stroke-width="2" />
-  
-  <!-- Saffron, White, and Green Scanning Laser -->
-  <line x1="40" y1="40" x2="760" y2="40" stroke-width="3" class="scanner-line" />
+  <!-- Center Biometric Scanning Zone -->
+  <circle cx="400" cy="140" r="110" class="hud-bg" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2" />
+  <circle cx="400" cy="140" r="95" fill="none" stroke="#00D2FF" stroke-width="1.5" stroke-dasharray="10 40 30 20" opacity="0.3" class="hud-circle-outer" />
+  <circle cx="400" cy="140" r="80" fill="none" stroke="#FF9933" stroke-width="1" stroke-dasharray="5 15 2 8" opacity="0.4" class="hud-circle-inner" />
 
-  <!-- Title Texts -->
-  <text x="400" y="250" text-anchor="middle" class="text-title">PEHCHAAN</text>
-  <text x="400" y="275" text-anchor="middle" class="text-subtitle">NHAI Secure Offline Verification Platform</text>
+  <!-- Face Bounding Box HUD -->
+  <rect x="345" y="85" width="110" height="110" rx="10" fill="none" stroke="rgba(0, 210, 255, 0.15)" stroke-width="1" class="pulse-glow" />
+  <path d="M 345,100 L 345,85 L 360,85 M 440,85 L 455,85 L 455,100 M 455,180 L 455,195 L 440,195 M 360,195 L 345,195 L 345,180" fill="none" stroke="#00D2FF" stroke-width="2" />
+
+  <!-- Face Scanning Line -->
+  <line x1="100" y1="40" x2="700" y2="40" stroke-width="3.5" class="scanner-line" />
+
+  <!-- Indian National Flag Accent Stripes -->
+  <g transform="translate(300, 20)">
+    <rect x="0" y="0" width="67" height="3" class="flag-saffron" />
+    <rect x="67" y="0" width="66" height="3" class="flag-white" />
+    <rect x="133" y="0" width="67" height="3" class="flag-green" />
+  </g>
+
+  <!-- Typography -->
+  <text x="400" y="265" text-anchor="middle" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="8">PEHCHAAN</text>
+  <text x="400" y="288" text-anchor="middle" font-weight="600" font-size="11" fill="#64748b" letter-spacing="4">NHAI SECURE ON-DEVICE VERIFICATION</text>
 </svg>
 
 <br/>
 
-[![Framework](https://img.shields.io/badge/Framework-React%20Native%20(Expo%20v56)-6366F1?style=for-the-badge&logo=react)](https://reactnative.dev)
-[![ML-Engine](https://img.shields.io/badge/ML%20Engine-TFLite%20On--Device-10B981?style=for-the-badge&logo=tensorflow)](https://tensorflow.org)
-[![Local-DB](https://img.shields.io/badge/Local%20DB-SQLite%20WAL%20Mode-F59E0B?style=for-the-badge&logo=sqlite)](https://sqlite.org)
-[![Compliance](https://img.shields.io/badge/Compliance-NHAI%20DataLake-008080?style=for-the-badge)](#)
+<div align="center">
+  
+  [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blue?style=flat-square&logo=react)](https://reactnative.dev)
+  [![ML-Engine](https://img.shields.io/badge/ML%20Engine-TFLite%20On--Device-success?style=flat-square&logo=tensorflow)](https://tensorflow.org)
+  [![Database](https://img.shields.io/badge/Database-SQLite%20(WAL)-orange?style=flat-square&logo=sqlite)](https://sqlite.org)
+  [![Authentication](https://img.shields.io/badge/Auth-Offline%20First-red?style=flat-square)](#)
+  [![Compliance](https://img.shields.io/badge/Compliance-NHAI%20DataLake-008080?style=flat-square)](#)
+
+  **Pehchaan (पहचान)** is a high-performance, completely offline-first facial authentication and active liveness verification system specifically engineered to secure contractor labor tracking, toll plaza handovers, and highway patrol attendance within the **National Highways Authority of India (NHAI)** ecosystem.
+</div>
 
 ---
 
-# PEHCHAAN (पहचान)
+## 🏛️ Government of India & NHAI Context
 
-An enterprise-grade, offline-first biometric authentication and active liveness verification system specifically designed for the **National Highways Authority of India (NHAI)**, Ministry of Road Transport and Highways (MoRTH).
+NHAI infrastructure projects are highly distributed and frequently executed in remote regions lacking cellular coverage, such as deep mountain passes, border corridors, or underground tunnels. Standard cloud-based biometric systems fail in these conditions.
 
-The application executes low-latency face identification and anti-spoofing routines directly on standard mid-range mobile hardware without requiring active cellular coverage, keeping personnel tracking secure and auditable in remote highway sectors, tunnels, and toll booth corridors.
-
----
-
-## 🏛️ NHAI Ecosystem Alignment & Compliance
-
-NHAI operations involve distributed, third-party concessionaires and contractors managing highway maintenance, patrols, tolling plazas, and construction sites. The Pehchaan engine directly addresses these operational hurdles:
-
-* **Proxy Attendance Blockage:** Eliminates "buddy punching" (photo holding or identity spoofing) for labor compliance auditing.
-* **Telecom Resiliency:** Functions inside remote highway corridors or deep tunnels with absolute network blackout.
-* **Data Privacy Compliance:** All biometric vectors remain local to the device Keystore/SQLite buffer. Raw photos are processed in memory and never written to permanent disk storage.
-* **Unified DataLake Sync:** Syncs batch logs in JSON formats directly to AWS S3 using custom local Web Cryptography signing calculations that bypass heavy third-party client wrappers.
+Pehchaan resolves this by deploying specialized, lightweight deep neural networks directly onto field personnel's mid-range mobile hardware. All face detection, geometric alignment, and embedding comparisons occur strictly in the device's CPU register layer, making biometric checks fast, secure, and 100% network-independent.
 
 ---
 
-## ⚙️ Biometric Processing Pipeline
+## ⚙️ System Architecture & Inference Pipeline
 
-Pehchaan implements a sequential, low-latency execution pipeline:
+The verification pipeline operates in a sequential, memory-safe loop designed to complete under **150 milliseconds**:
 
 ```mermaid
-graph TD
-    A[Front Camera Frame] -->|manipulateAsync| B[Resize to 640x640]
-    B -->|decodeJpegBase64ToRGBA| C[Raw RGBA Buffer]
-    C -->|alignFace Similarity Transform| D[112x112 Canonical Face Crop]
-    D -->|preprocessFacePixels| E[Normalize to -1.0, 1.0]
-    E -->|react-native-fast-tflite| F[MobileFaceNet 5.2MB Inference]
-    F -->|Output 192-dim Vector| G[L2 Normalization]
-    G -->|Cosine Similarity Comparison| H[SQLite Match vs Enrolled Faces]
+flowchart LR
+    A[Camera Capture] --> B[Resize 640x640]
+    B --> C[RGBA Byte Decode]
+    C --> D[Similarity Warp & Align]
+    D --> E[Normalize Input]
+    E --> F[TFLite Model Pass]
+    F --> G[192-dim Embedding]
+    G --> H[Cosine Similarity vs SQLite]
 ```
 
-### 1. Spatial Normalization & Alignment
-Using coordinates from the face landmark detector, the engine calculates the rotation angle ($\theta$) and the scale factor ($s$) between the eyes:
-$$\theta = \text{atan2}(d_y, d_x)$$
-$$s = \frac{\text{canonicalDistance}}{\text{actualDistance}}$$
+### 1. Affine Similarity Transformation
+To normalize facial rotation, skew, and size differences caused by camera angles or worker heights, the alignment engine maps the face to a canonical $112 \times 112$ bounding box:
+* Computes the angle ($\theta = \text{atan2}(dy, dx)$) and the scale factor ($s = \frac{\text{canonicalDistance}}{\text{actualDistance}}$) based on eye landmarks.
+* Warps the pixel canvas using inverse coordinate mapping to center eye, nose, and mouth anchors:
+  $$srcX = \frac{(x - t_x)\cos(-\theta) + (y - t_y)\sin(-\theta)}{s}$$
 
-The raw RGBA frame is translated, rotated, and scaled into a $112 \times 112$ canonical bounding box using nearest-neighbor coordinates mapping, resolving pose alignment issues in harsh sun glare or night shadow settings.
-
-### 2. Neural Vector Comparison
-* **Forward Pass:** The native TFLite interpreter handles inference on the normalized $112 \times 112 \times 3$ float array in **50ms – 150ms** on standard CPUs.
-* **Match Score:** Compares the normalized query embedding vector ($\vec{A}$) against local SQLite database profile embeddings ($\vec{B}$) using **Cosine Similarity**:
+### 2. On-Device Model Inference
+* **Normalization:** Pixel buffers are processed in memory and scaled to $[-1.0, 1.0]$.
+* **TFLite Execution:** The $112 \times 112 \times 3$ tensor is executed on the CPU registers via native `react-native-fast-tflite` bindings, loading a **5.2 MB** `mobilefacenet.tflite` model.
+* **Vector Comparison:** Matches the extracted 192-dimensional vector against stored templates using **Cosine Similarity**:
   $$\text{Similarity}(\vec{A}, \vec{B}) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\|_2 \|\vec{B}\|_2}$$
-  * A threshold of **`0.65`** is configured for accurate matching without demographic skew.
+  Matches are confirmed if similarity is $\ge 0.65$.
 
 ---
 
-## 👁️ Challenge-Response Liveness Detection
+## 👁️ Challenge-Response Liveness Tracking
 
-To verify user presence, the application employs a randomized challenge-response loop, validating physical indicators dynamically:
+To block spoofing attacks using printed headshots or high-definition tablets, Pehchaan integrates a randomized challenge-response validator:
 
-* **Blink Loop (`BlinkDetector`):** Verifies the average eye openness index falls below $0.3$ (fully closed) and reopens above $0.7$ within a rolling 5-second interval.
-* **Pose Yaw Loop (`HeadTurnDetector`):** Establishes a zero-baseline face angle, then detects horizontal movement past a strict $\pm 20^\circ$ yaw angle boundary.
-* **Smiling Check (`SmileDetector`):** Monitors mouth stretching against a smile probability index threshold of $0.75$.
-
----
-
-## 📍 Offgrid Database Caching & S3 Synchronization
-
-Pehchaan decouples network dependencies from active operations using a dual-table SQLite storage pattern:
-
-### 1. Non-Blocking GPS Prefetching
-* The app queries foreground permissions and runs location prefetching (`Location.Accuracy.High`) asynchronously when the camera screen mounts.
-* On matching, the coordinates are read instantly from the active memory cache in **0ms**, avoiding any blocking GPS hardware locks.
-
-### 2. Dual-Table Caching
-* **`attendance_records`:** Stores detailed logs (ID, confidence, location JSON, timestamps, sync flag).
-* **`unique_attendance_days`:** A compact registry tracking unique `(employee_id, date)` combinations.
-* **Storage Optimization:** Upon internet recovery, S3 uploads the detailed JSON log batch and executes a purge on `attendance_records` to prevent local disk expansion. However, the logs in `unique_attendance_days` are never purged, allowing local calendars and streaks to remain fully functional offline.
+| Challenge Type | Target Metric | Success Condition | Target Threat Prevented |
+| :--- | :--- | :--- | :--- |
+| **👁️ Blink Cycle** | Eye Aspect Ratio (EAR) | Average EAR drops $< 0.3$ then reopens $> 0.7$ | High-Res Printed Photographs |
+| **🔄 Head Turn** | Rotation Yaw Angle | Yaw rotation shifts $\ge \pm 20^\circ$ from baseline | 2D Screen Replay Attacks |
+| **😊 Smile Check** | Smile Probability Index | Probability index exceeds $0.75$ | Static Silicon Masks |
 
 ---
 
-## 🛠️ Setup & Local Configuration
+## 📍 Offline Caching & S3 Sync Mechanics
 
-### Environment Variables
-Create a local `.env` file at the root:
+Pehchaan uses a dual-table caching database layout in SQLite to minimize local disk footprint:
+
+* **Non-Blocking GPS:** Background workers prefetch high-accuracy GPS coordinates (`Location.Accuracy.High`) asynchronously when the camera screen mounts. During face snap, coordinates are read instantly from the memory cache in **0ms**, avoiding any camera shutter delay.
+* **Dual-Table Scheme:**
+  * `attendance_records` stores detailed, geo-stamped logs.
+  * `unique_attendance_days` stores small index records of employee IDs and dates.
+* **Delta Sync & Purging:** When internet coverage is restored, the sync manager uploads the detailed logs to AWS S3 using direct REST PUT calls signed locally via Web Crypto SigV4. It then purges successfully synced detailed records from the device to prevent disk bloat, while preserving `unique_attendance_days` so local calendars and stats continue to work offline.
+
+---
+
+## 🚀 Installation & Local Run
+
+### System Environment
+* **Android:** API Level 26+ (Android 8.0+)
+* **iOS:** iOS 12.0+
+
+### Dependencies Setup
+Run the following inside your project directory:
+```bash
+npx expo install react-native-vision-camera expo-sqlite expo-image-manipulator expo-location expo-linear-gradient react-native-reanimated
+```
+
+### Environment Config (`.env`)
 ```env
 EXPO_PUBLIC_AWS_REGION=ap-south-1
 EXPO_PUBLIC_S3_BUCKET=pehchaan-attendance-data
@@ -164,16 +186,28 @@ EXPO_PUBLIC_AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
 EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 ```
 
-### Dependency Setup
-Run the following commands to install libraries:
-```bash
-npx expo install react-native-vision-camera expo-sqlite expo-image-manipulator expo-location expo-linear-gradient react-native-reanimated
-```
-
 ---
 
 ## 👥 Contributors
 
-* 👨‍💻 **Mahak Mehadia**
-* 👨‍💻 **Parthiv Abhani**
-* 👨‍💻 **Shlok Vij**
+Our core engineering and design team:
+
+<table align="center" border="0" cellpadding="10" cellspacing="0">
+  <tr align="center">
+    <td width="33%">
+      <img src="https://github.com/identicons/aishide.png" width="80" style="border-radius:50%;" /><br/>
+      <strong>Aishi De</strong><br/>
+      <sub>Core Engineer & PM</sub>
+    </td>
+    <td width="33%">
+      <img src="https://github.com/identicons/parthivabhani.png" width="80" style="border-radius:50%;" /><br/>
+      <strong>Parthiv Abhani</strong><br/>
+      <sub>ML & Pipeline Arch</sub>
+    </td>
+    <td width="33%">
+      <img src="https://github.com/identicons/Svizzcodes.png" width="80" style="border-radius:50%;" /><br/>
+      <strong>Shlok Vij</strong><br/>
+      <sub>Biometric Core Developer</sub>
+    </td>
+  </tr>
+</table>
