@@ -3,222 +3,361 @@
 </p>
 
 
-# 🛣️ PEHCHAAN
 
 <div align="center">
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0F4C81,50:138808,100:FF9933&text=PEHCHAAN&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Offline%20Facial%20Authentication%20for%20Highway%20Field%20Personnel&descAlignY=60" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=34&duration=2500&pause=1000&color=00E676&center=true&vCenter=true&width=1000&lines=Authenticate+Anywhere.;Trust+Everywhere.;Built+for+NHAI+Hackathon+7.0.;Offline+Facial+Authentication.;Edge+AI+%7C+TinyML+%7C+React+Native" />
-
-![NHAI](https://img.shields.io/badge/NHAI-Hackathon%207.0-blue?style=for-the-badge)
-![React Native](https://img.shields.io/badge/React%20Native-Mobile%20App-61DAFB?style=for-the-badge)
-![TensorFlow Lite](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=for-the-badge)
-![Edge AI](https://img.shields.io/badge/Edge-AI-success?style=for-the-badge)
-![TinyML](https://img.shields.io/badge/TinyML-Optimized-orange?style=for-the-badge)
-
-</div>
-
----
-
-# 🚗 Smart Highway Authentication
-
 <div align="center">
 
-```text
-═══════════════════════════════════════════════════════════════
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=36&duration=2500&pause=1200&color=FCBA03&center=true&vCenter=true&width=1100&lines=🚀+PEHECHAAN;Offline+Facial+Authentication+%26+Attendance+System;Built+for+Smart+Workforce+Verification;Authenticate+Anywhere.+Trust+Everywhere.;Built+for+NHAI+Hackathon+7.0" />
 
-🚗 ─────── 🚚 ─────── 🚙 ─────── 🚓 ─────── 🚛
+<br>
 
-                    PEHCHAAN
-
-     AI-Powered Offline Workforce Authentication
-
-═══════════════════════════════════════════════════════════════
-```
+![NHAI](https://img.shields.io/badge/NHAI-Hackathon%207.0-005BAC?style=for-the-badge)
+![React Native](https://img.shields.io/badge/React%20Native-Mobile%20App-61DAFB?style=for-the-badge&logo=react)
+![TensorFlow Lite](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=for-the-badge&logo=tensorflow)
+![Offline First](https://img.shields.io/badge/Offline-First-7B1FA2?style=for-the-badge)
+![Edge AI](https://img.shields.io/badge/Edge-AI-00C853?style=for-the-badge)
 
 </div>
 
----
 
-# 📖 Overview
-
-Pehchaan is an AI-powered offline facial authentication platform built for remote highway projects, infrastructure sites, construction corridors, and field workforce operations.
-
-✅ Offline Facial Recognition  
-✅ Liveness Detection  
-✅ GPS Verification  
-✅ SQLite Storage  
-✅ AWS Synchronization  
-✅ Edge AI Processing  
+<p align="center">
+  <img src="https://img.shields.io/badge/Hackathon-NHAI-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-React%20Native-black?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js">
+  <img src="https://img.shields.io/badge/AI-Face%20Recognition-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge">
+</p>
 
 ---
 
-# 🚧 NHAI Checkpoint Authentication
+## 🎯 Problem Statement
+
+Managing attendance and identity verification for field workers remains a major challenge, especially in remote locations where internet connectivity is unreliable.
+
+Traditional systems:
+
+- Depend heavily on cloud connectivity
+- Are vulnerable to proxy attendance
+- Lack robust identity verification
+- Struggle in low-network environments
+
+Pehechaan solves these issues through a secure, AI-powered, offline-first authentication system.
+
+---
+
+<p align="center">
+🚗══════════════════════════════════════════════════════🛣️
+</p>
+
+## 💡 Our Solution
+
+Pehechaan is an AI-powered offline facial authentication and attendance platform designed for workforce verification in remote and infrastructure-heavy environments.
+
+Using facial recognition, liveness detection, GPS validation, and local data storage, the system ensures reliable authentication even without internet access.
+
+Once connectivity is restored, all attendance records are automatically synchronized with the cloud.
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|----------|-------------|
+| 🔐 Face Authentication | AI-based identity verification |
+| 👁️ Liveness Detection | Prevents spoofing using photos/videos |
+| 📶 Offline First | Works without internet |
+| 📍 GPS Logging | Location-based attendance validation |
+| ☁️ Auto Synchronization | Syncs data once connectivity returns |
+| 🛡️ Privacy Focused | Local processing minimizes data exposure |
+| ⚡ Fast Verification | Recognition within milliseconds |
+
+---
+
+<p align="center">
+🚧══════════════ HIGHWAY AUTHENTICATION JOURNEY ══════════════🚧
+</p>
+
+## 🔄 Workflow
 
 ```text
-🚗──────────────▶ 🚧 NHAI CHECKPOINT
-
-                 📷 FACE SCAN
-
-                 👁️ LIVENESS CHECK
-
-                 🧠 AI VERIFICATION
-
-                 ✅ ACCESS GRANTED
-
-🚗────────────────────────────────▶
+📸 Face Capture
+       ↓
+👁️ Liveness Detection
+       ↓
+🤖 Face Recognition
+       ↓
+📍 GPS Validation
+       ↓
+💾 Local Storage
+       ↓
+☁️ Cloud Synchronization
 ```
 
 ---
 
-# 🟩 Real-Time Authentication Journey
-
-```text
-🟩⬛⬛🟩   🟩⬛⬛🟩   ⬛🟩🟩⬛   🟩🟩🟩🟩
-🟩🟩⬛🟩   🟩⬛⬛🟩   🟩⬛⬛🟩      🟩
-🟩⬛🟩🟩   🟩🟩🟩🟩   🟩🟩🟩🟩      🟩
-🟩⬛⬛🟩   🟩⬛⬛🟩   🟩⬛⬛🟩      🟩
-🟩⬛⬛🟩   🟩⬛⬛🟩   🟩⬛⬛🟩   🟩🟩🟩🟩
-```
-
-**Green authentication blocks form NHAI.**
-
----
-
-# 📷 Facial Recognition Scanner
-
-```text
-┌─────────────────┐
-│       😀        │
-└─────────────────┘
-
-██████████████████
-SCANNING FACE...
-██████████████████
-
-Confidence Score : 98.7%
-Liveness Check   : Passed
-Status           : VERIFIED
-```
-
----
-
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
 ```mermaid
-flowchart LR
-
-A[👷 Field Personnel]
---> B[📷 Camera Capture]
-
-B --> C[👁️ Liveness Detection]
-
-C --> D[🧠 MobileFaceNet]
-
-D --> E[🔍 Face Matching]
-
-E --> F[✅ Authentication]
-
-F --> G[📍 GPS Logging]
-
-G --> H[💾 SQLite]
-
-H --> I[☁️ AWS Sync]
+flowchart TD
+    A[User] --> B[Camera Capture]
+    B --> C[Liveness Detection]
+    C --> D[Face Recognition]
+    D --> E[Local Database]
+    E --> F[Attendance Logging]
+    F --> G[Cloud Sync]
 ```
 
 ---
 
-# ⚙️ Technology Stack
-
-| Layer | Technology |
-|---------|---------|
-| Mobile | React Native |
-| AI | TensorFlow Lite |
-| Recognition | MobileFaceNet |
-| Camera | Vision Camera |
-| Database | SQLite |
-| State | Zustand |
-| Connectivity | NetInfo |
-| Cloud | AWS S3 |
-
----
-
-# ☁️ Offline → Online Sync
-
-```text
-📱 Device
-    │
-    ▼
-💾 SQLite Storage
-    │
-    ▼
-📡 Network Available
-    │
-    ▼
-☁️ AWS Upload
-    │
-    ▼
-✅ Verification
-    │
-    ▼
-🗑️ Local Purge
-```
-
----
-
-# 📊 Performance
+## ⚡ Performance Metrics
 
 | Metric | Value |
-|---------|---------|
-| Recognition Speed | 200-400 ms |
-| Liveness Detection | 2-3 sec |
-| Accuracy Target | >95% |
-| Offline Capability | 100% |
-| Model Size | ~5 MB |
-| RAM Requirement | 3 GB |
+|----------|----------|
+| Recognition Time | 200–400 ms |
+| Internet Dependency | None |
+| Authentication Mode | Offline |
+| GPS Validation | Enabled |
+| Data Synchronization | Automatic |
+| Attendance Fraud Protection | High |
 
 ---
 
-# 🛣️ Highway Roadmap
+<p align="center">
+🛣️══════════════════════════════════════════════════════🏁
+</p>
+
+## 📊 Project Impact
+
+Pehechaan addresses a critical workforce authentication challenge in sectors where connectivity cannot be guaranteed.
+
+### Key Benefits
+
+- 📶 Enables completely offline authentication
+- 🔒 Reduces attendance fraud
+- ⚡ Accelerates workforce verification
+- 📍 Ensures location-aware attendance
+- 🛡️ Enhances user privacy
+- 💰 Reduces dependency on cloud infrastructure
+
+### Potential Applications
+
+- 🛣️ Highway Projects
+- 🏗️ Construction Sites
+- 🏭 Manufacturing Plants
+- 🚜 Agricultural Operations
+- 🏫 Educational Institutions
+- 🏢 Government Field Services
+
+---
+
+## 📈 Scalability
+
+Pehechaan is designed to scale from a small workforce solution to enterprise-level deployments.
+
+### Current Capabilities
+
+- Offline Authentication
+- Local Data Storage
+- GPS-Based Attendance
+- Cloud Synchronization
+
+### Future Expansion
+
+- Multi-region deployment
+- Support for 100,000+ users
+- Real-time analytics dashboards
+- Edge AI acceleration
+- Multi-language support
+- Enterprise administration tools
+- Advanced reporting systems
+
+---
+
+## 🆚 Why Pehechaan?
+
+| Feature | Traditional Systems | Pehechaan |
+|----------|----------|----------|
+| Internet Required | ❌ | ✅ |
+| Offline Authentication | ❌ | ✅ |
+| Liveness Detection | ⚠️ | ✅ |
+| GPS Verification | ⚠️ | ✅ |
+| Privacy Focused | ⚠️ | ✅ |
+| Automatic Sync | ❌ | ✅ |
+| Fraud Prevention | Low | High |
+
+---
+
+<p align="center">
+🚗══════════════════════════════════════════════════════🛣️
+</p>
+
+## 🖥️ Tech Stack
+
+### Frontend
+- React Native
+- Expo
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- SQLite
+- Local Storage
+
+### AI/ML
+- Facial Recognition
+- Liveness Detection
+
+### Cloud
+- Cloud Synchronization Services
+
+---
+
+## 🎬 Demonstration
+
+### Project Demo
+
+Add your demo GIF here:
+
+```html
+<p align="center">
+  <img src="assets/demo.gif" width="900">
+</p>
+```
+
+### Screenshots
+
+Add screenshots of:
+
+- Login Screen
+- Face Scan
+- Authentication Success
+- Attendance Dashboard
+- Sync Status
+
+---
+
+## 🛣️ Development Roadmap
 
 ```text
-2026 ───────── 2027 ───────── 2028 ───────── 2029
+Face Authentication      ██████████ 100%
+Offline Storage          ██████████ 100%
+GPS Validation           ██████████ 100%
+Cloud Sync               █████████░ 90%
 
-🚗
- │
- ├── Offline Authentication
- ├── Datalake 3.0 Integration
- ├── Geo-Fencing
- ├── Analytics Dashboard
- └── National Scale Deployment
+Admin Dashboard          ███████░░░ 70%
+Analytics Module         ██████░░░░ 60%
+Multi-language Support   ████░░░░░░ 40%
+Enterprise Deployment    ███░░░░░░░ 30%
 ```
 
 ---
 
-# ✅ Hackathon Compliance
+## 🌍 Real World Applications
 
-- ✅ React Native
-- ✅ Android Support
-- ✅ iOS Support
-- ✅ Offline Facial Recognition
-- ✅ Liveness Detection
-- ✅ Edge AI
-- ✅ TinyML
-- ✅ AWS Synchronization
-- ✅ Lightweight Model
+- Highway Workforce Monitoring
+- Construction Attendance Systems
+- Government Infrastructure Projects
+- Manufacturing Workforce Tracking
+- Educational Attendance Management
+- Remote Office Authentication
 
 ---
 
-<div align="center">
+## 🔮 Future Enhancements
 
-## 🇮🇳 Built for NHAI Hackathon 7.0 by Team Semicolonists
+- Aadhaar Integration
+- Advanced Face Recognition Models
+- Enterprise Analytics Dashboard
+- Edge AI Optimization
+- Multi-language Support
+- Multi-device Synchronization
+- Smart Workforce Insights
 
-Members:
-- Aishi De
-- Parthiv Abhani
-- Shlok Vij
+---
 
-### Authenticate Anywhere. Trust Everywhere.
+<p align="center">
+🏁════════════════════════ TEAM PEHECHAAN ════════════════🏁
+</p>
 
-</div>
+## 👨‍💻 Team
+
+<table align="center">
+<tr>
+
+<td align="center" width="33%">
+
+### 👩‍💻 AISHI DE
+
+Frontend Development  
+UI/UX Design  
+Documentation & Presentation
+
+</td>
+
+<td align="center" width="33%">
+
+### 👨‍💻 PARTHIV ABHANI
+
+Backend Development  
+System Architecture  
+Application Integration
+
+</td>
+
+<td align="center" width="33%">
+
+### 🤖 SHLOK VIJ
+
+AI/ML Development  
+Face Recognition  
+Liveness Detection
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🏆 Hackathon Submission
+
+**Event:** NHAI Hackathon
+
+**Theme:** Smart Workforce Authentication
+
+**Objective:** Create a secure, reliable, and offline-first attendance and authentication platform for field operations.
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to:
+
+- NHAI Hackathon Organizers
+- Open Source Community
+- Contributors and Mentors
+
+---
+
+<h3 align="center">
+Built with ❤️ for NHAI Hackathon
+</h3>
+
+<p align="center">
+🚀 Secure • Offline • Intelligent • Scalable
+</p>
+
+<p align="center">
+Made by
+<br><br>
+
+<b>AISHI DE</b><br>
+<b>PARTHIV ABHANI</b><br>
+<b>SHLOK VIJ</b>
+
+</p>
