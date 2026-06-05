@@ -1,132 +1,179 @@
-# PEHCHAAN: Offline Biometric Face Verification Engine
+<!-- Animated SVG Header Banner representing Face Verification scanning in Indian Flag hues -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="300" style="background:#090d1a; font-family:'Segoe UI',Roboto,sans-serif; border-radius:12px;">
+  <style>
+    @keyframes scan {
+      0% { transform: translateY(0px); opacity: 0.4; }
+      50% { transform: translateY(220px); opacity: 1; }
+      100% { transform: translateY(0px); opacity: 0.4; }
+    }
+    @keyframes pulse {
+      0% { opacity: 0.2; }
+      50% { opacity: 0.6; }
+      100% { opacity: 0.2; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .scanner-line {
+      animation: scan 5s ease-in-out infinite;
+      stroke: url(#laser-grad);
+    }
+    .grid-bg {
+      stroke: #172554;
+      stroke-width: 0.5;
+    }
+    .hud-circle {
+      transform-origin: 400px 150px;
+      animation: spin 25s linear infinite;
+    }
+    .flag-saffron { fill: #FF9933; }
+    .flag-white { fill: #FFFFFF; }
+    .flag-green { fill: #138808; }
+    .text-title { font-weight: 900; font-size: 42px; fill: #ffffff; letter-spacing: 6px; }
+    .text-subtitle { font-size: 13px; fill: #94a3b8; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; }
+  </style>
+  
+  <defs>
+    <linearGradient id="laser-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9933" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#138808" />
+    </linearGradient>
+    
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" class="grid-bg"/>
+    </pattern>
+  </defs>
 
-Pehchaan is an enterprise-grade, offline-first facial authentication and active liveness verification system specifically engineered for the National Highways Authority of India (NHAI). The system operates entirely on-device, executing high-performance deep learning models and cryptographic verification routines directly on standard mid-range mobile processors without requiring an active cellular connection or cloud-based API integrations.
+  <!-- Background grid -->
+  <rect width="800" height="300" fill="url(#grid)" />
+  
+  <!-- Left Side: NHAI / Indian Flag Colors subtle accent -->
+  <rect x="0" y="0" width="8" height="100" class="flag-saffron" />
+  <rect x="0" y="100" width="8" height="100" class="flag-white" />
+  <rect x="0" y="200" width="8" height="100" class="flag-green" />
+
+  <!-- Animated HUD Circles -->
+  <circle cx="400" cy="150" r="110" fill="none" stroke="rgba(99, 102, 241, 0.15)" stroke-width="1.5" />
+  <circle cx="400" cy="150" r="95" fill="none" stroke="rgba(255, 153, 51, 0.3)" stroke-width="2" stroke-dasharray="15 35" class="hud-circle" />
+  <circle cx="400" cy="150" r="80" fill="none" stroke="#138808" stroke-width="1.5" stroke-dasharray="5 15" opacity="0.6" style="animation: spin 12s linear infinite reverse; transform-origin: 400px 150px;" />
+
+  <!-- Face Silhouette Graphic in the center -->
+  <path d="M400,90 C380,90 365,108 365,135 C365,168 380,190 400,190 C420,190 435,168 435,135 C435,108 420,90 400,90 Z M387,128 C387,124 390,121 394,121 C398,121 401,124 401,128 C401,132 398,135 394,135 C390,135 387,132 387,128 Z M413,128 C413,124 416,121 420,121 C424,121 427,124 427,128 C427,132 424,135 420,135 C416,135 413,132 413,128 Z" fill="none" stroke="rgba(255, 255, 255, 0.35)" stroke-width="2" />
+  
+  <!-- Saffron, White, and Green Scanning Laser -->
+  <line x1="40" y1="40" x2="760" y2="40" stroke-width="3" class="scanner-line" />
+
+  <!-- Title Texts -->
+  <text x="400" y="250" text-anchor="middle" class="text-title">PEHCHAAN</text>
+  <text x="400" y="275" text-anchor="middle" class="text-subtitle">NHAI Secure Offline Verification Platform</text>
+</svg>
+
+<br/>
+
+[![Framework](https://img.shields.io/badge/Framework-React%20Native%20(Expo%20v56)-6366F1?style=for-the-badge&logo=react)](https://reactnative.dev)
+[![ML-Engine](https://img.shields.io/badge/ML%20Engine-TFLite%20On--Device-10B981?style=for-the-badge&logo=tensorflow)](https://tensorflow.org)
+[![Local-DB](https://img.shields.io/badge/Local%20DB-SQLite%20WAL%20Mode-F59E0B?style=for-the-badge&logo=sqlite)](https://sqlite.org)
+[![Compliance](https://img.shields.io/badge/Compliance-NHAI%20DataLake-008080?style=for-the-badge)](#)
 
 ---
 
-## 1. System Architecture & Pipeline Flow
+# PEHCHAAN (पहचान)
 
-The authentication pipeline executes in a sequential, non-blocking flow designed to maximize biometric accuracy while maintaining a processing latency of under 150ms:
+An enterprise-grade, offline-first biometric authentication and active liveness verification system specifically designed for the **National Highways Authority of India (NHAI)**, Ministry of Road Transport and Highways (MoRTH).
 
+The application executes low-latency face identification and anti-spoofing routines directly on standard mid-range mobile hardware without requiring active cellular coverage, keeping personnel tracking secure and auditable in remote highway sectors, tunnels, and toll booth corridors.
+
+---
+
+## 🏛️ NHAI Ecosystem Alignment & Compliance
+
+NHAI operations involve distributed, third-party concessionaires and contractors managing highway maintenance, patrols, tolling plazas, and construction sites. The Pehchaan engine directly addresses these operational hurdles:
+
+* **Proxy Attendance Blockage:** Eliminates "buddy punching" (photo holding or identity spoofing) for labor compliance auditing.
+* **Telecom Resiliency:** Functions inside remote highway corridors or deep tunnels with absolute network blackout.
+* **Data Privacy Compliance:** All biometric vectors remain local to the device Keystore/SQLite buffer. Raw photos are processed in memory and never written to permanent disk storage.
+* **Unified DataLake Sync:** Syncs batch logs in JSON formats directly to AWS S3 using custom local Web Cryptography signing calculations that bypass heavy third-party client wrappers.
+
+---
+
+## ⚙️ Biometric Processing Pipeline
+
+Pehchaan implements a sequential, low-latency execution pipeline:
+
+```mermaid
+graph TD
+    A[Front Camera Frame] -->|manipulateAsync| B[Resize to 640x640]
+    B -->|decodeJpegBase64ToRGBA| C[Raw RGBA Buffer]
+    C -->|alignFace Similarity Transform| D[112x112 Canonical Face Crop]
+    D -->|preprocessFacePixels| E[Normalize to -1.0, 1.0]
+    E -->|react-native-fast-tflite| F[MobileFaceNet 5.2MB Inference]
+    F -->|Output 192-dim Vector| G[L2 Normalization]
+    G -->|Cosine Similarity Comparison| H[SQLite Match vs Enrolled Faces]
 ```
-[Camera Frame] ➔ [manipulateAsync: 640x640] ➔ [decodeJpegBase64ToRGBA] 
-                    │
-                    ▼
-          [Face landmark Warp Alignment]
-                    │
-                    ▼
-         [preprocessFacePixels (112x112)]
-                    │
-                    ▼
-     [MobileFaceNet TFLite Inference] ➔ [192-dim Vector] ➔ [l2Normalize]
-                                                               │
-                                                               ▼
-                                                    [Cosine Match vs SQLite]
-```
 
-### Step 1: Camera Capture & Image Processing
-* **Vision Camera Frame Capture:** The front camera captures a high-resolution frame.
-* **Aspect Resizing:** `expo-image-manipulator` scales the captured image to a uniform $640 \times 640$ pixels, reducing buffer load.
-* **RGBA Byte Decoding:** The base64 JPEG stream is decoded into a raw RGBA byte buffer using a canvas-free JS decoder (`jpeg-js`).
+### 1. Spatial Normalization & Alignment
+Using coordinates from the face landmark detector, the engine calculates the rotation angle ($\theta$) and the scale factor ($s$) between the eyes:
+$$\theta = \text{atan2}(d_y, d_x)$$
+$$s = \frac{\text{canonicalDistance}}{\text{actualDistance}}$$
 
-### Step 2: Affine Similarity Transformation & Face Alignment
-To normalize variations in head tilt, translation, and scale, the engine applies an affine similarity transform based on five facial landmarks (Left Eye, Right Eye, Nose, Left Mouth, Right Mouth):
-* The system computes the scale factor $s$ and rotation angle $\theta$ from the eye coordinates:
-  $$\theta = \text{atan2}(dy, dx)$$
-  $$s = \frac{\text{canonicalEyeDistance}}{\text{capturedEyeDistance}}$$
-* It maps pixels from the source coordinate system back to a canonical $112 \times 112$ destination grid using inverse mapping with nearest-neighbor interpolation, ensuring the eyes, nose, and mouth align with strict pixel boundaries.
+The raw RGBA frame is translated, rotated, and scaled into a $112 \times 112$ canonical bounding box using nearest-neighbor coordinates mapping, resolving pose alignment issues in harsh sun glare or night shadow settings.
 
-### Step 3: Local Model Inference
-* **Normalization:** Aligned pixels are normalized from $[0, 255]$ to the range $[-1.0, 1.0]$.
-* **TFLite CPU Forward Pass:** The $112 \times 112 \times 3$ float32 tensor is loaded into the native TensorFlow Lite interpreter via `react-native-fast-tflite`. On actual hardware, C++ bindings run the `mobilefacenet.tflite` (5.2 MB) model on the CPU registers in 50ms – 150ms.
-* **Output Embedding:** The model outputs a 192-dimensional floating-point vector. This vector is L2-normalized:
-  $$\vec{e}_{\text{normalized}} = \frac{\vec{e}}{\|\vec{e}\|_2}$$
-
-### Step 4: Verification & Cosine Matching
-The query embedding is compared against all locally enrolled personnel using **Cosine Similarity**:
-$$\text{Similarity}(\vec{A}, \vec{B}) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\|_2 \|\vec{B}\|_2}$$
-* **Thresholding:** If the cosine similarity exceeds $0.65$, it is registered as a match.
-* **Confidence Calibration:** The raw score is calibrated into a user-friendly percentage:
-  * Similarity above threshold is mapped linearly to $[75\%, 100\%]$.
-  * Similarity below threshold is mapped to $[0\%, 75\%)$.
+### 2. Neural Vector Comparison
+* **Forward Pass:** The native TFLite interpreter handles inference on the normalized $112 \times 112 \times 3$ float array in **50ms – 150ms** on standard CPUs.
+* **Match Score:** Compares the normalized query embedding vector ($\vec{A}$) against local SQLite database profile embeddings ($\vec{B}$) using **Cosine Similarity**:
+  $$\text{Similarity}(\vec{A}, \vec{B}) = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\|_2 \|\vec{B}\|_2}$$
+  * A threshold of **`0.65`** is configured for accurate matching without demographic skew.
 
 ---
 
-## 2. Active Liveness Detection Engine
+## 👁️ Challenge-Response Liveness Detection
 
-To prevent presentation attacks (e.g., holding a paper photo, playing a video on another screen, or 3D masks), Pehchaan implements a challenge-response state machine driven by three separate detectors:
+To verify user presence, the application employs a randomized challenge-response loop, validating physical indicators dynamically:
 
-1. **Blink Detection (`BlinkDetector`):**
-   * Computes the average eye opening probability.
-   * A valid blink is registered only when the probability drops below $0.3$ (eyes closed) and then rises above $0.7$ (eyes open) within a rolling frame window.
-2. **Head Turn Detection (`HeadTurnDetector`):**
-   * Sets a baseline yaw angle when the face is centered.
-   * Tracks left turns (yaw drops below $-20^\circ$) and right turns (yaw exceeds $+20^\circ$) relative to the baseline.
-3. **Smile Verification (`SmileDetector`):**
-   * Evaluates the smiling probability index.
-   * Compares the target mouth stretching ratio against a threshold of $0.75$.
+* **Blink Loop (`BlinkDetector`):** Verifies the average eye openness index falls below $0.3$ (fully closed) and reopens above $0.7$ within a rolling 5-second interval.
+* **Pose Yaw Loop (`HeadTurnDetector`):** Establishes a zero-baseline face angle, then detects horizontal movement past a strict $\pm 20^\circ$ yaw angle boundary.
+* **Smiling Check (`SmileDetector`):** Monitors mouth stretching against a smile probability index threshold of $0.75$.
 
 ---
 
-## 3. Geolocation & Database Sync Architecture
+## 📍 Offgrid Database Caching & S3 Synchronization
 
-The application is engineered to operate in zero-network environments indefinitely, utilizing a dual-table local SQLite caching pattern and local cryptographic signing:
+Pehchaan decouples network dependencies from active operations using a dual-table SQLite storage pattern:
 
-### Non-Blocking GPS Capture
-To prevent GPS hardware locking from adding latency to the biometric authentication screen:
-* The app initiates background location prefetching using `Location.Accuracy.High` immediately when the screen mounts.
-* On successful face matching, the app pulls the coordinates from the active location memory cache instantly (taking $0\text{ms}$ blocking time).
+### 1. Non-Blocking GPS Prefetching
+* The app queries foreground permissions and runs location prefetching (`Location.Accuracy.High`) asynchronously when the camera screen mounts.
+* On matching, the coordinates are read instantly from the active memory cache in **0ms**, avoiding any blocking GPS hardware locks.
 
-### SQLite Caching & Storage Cleanup
-Local storage is managed via two tables:
-1. **`attendance_records`:** Stores detailed logs, including names, timestamps, confidence scores, and raw location coordinates.
-2. **`unique_attendance_days`:** Stores compact primary key pairs `(employee_id, date)` representing daily attendance presence.
-
-* **S3 Synchronization:** When network access is available, the sync service batches all unsynced detailed records, uploads them to AWS S3, and marks them as synced.
-* **Local Purge:** The app runs a cleanup query to purge rows from `attendance_records` that have been successfully synced, freeing local storage. The rows in `unique_attendance_days` are preserved, ensuring local statistics, streaks, and calendars remain fully functional offline without bloating the device.
-
-### Web Crypto Signature V4 Sync
-To keep the binary lightweight, Pehchaan does not import the bulky, Node-dependent `@aws-sdk/client-s3` package. Instead:
-* The app performs direct HTTP PUT calls to S3.
-* Upload payloads are signed locally using AWS Signature Version 4 calculations built on top of the native React Native Hermes Web Crypto API.
+### 2. Dual-Table Caching
+* **`attendance_records`:** Stores detailed logs (ID, confidence, location JSON, timestamps, sync flag).
+* **`unique_attendance_days`:** A compact registry tracking unique `(employee_id, date)` combinations.
+* **Storage Optimization:** Upon internet recovery, S3 uploads the detailed JSON log batch and executes a purge on `attendance_records` to prevent local disk expansion. However, the logs in `unique_attendance_days` are never purged, allowing local calendars and streaks to remain fully functional offline.
 
 ---
 
-## 4. Setup & Installation
+## 🛠️ Setup & Local Configuration
 
-### Prerequisite Dependencies
-Install the required packages using expo:
-```bash
-npx expo install react-native-vision-camera expo-sqlite expo-image-manipulator expo-location expo-linear-gradient react-native-reanimated
-```
-*Note: Make sure your target device uses iOS 12.0+ or Android 8.0+.*
-
-### Model File Placement
-1. Create the model directory: `assets/models/`.
-2. Place your optimized `mobilefacenet.tflite` model in this directory.
-3. (Optional) In simulator mode, the runner automatically detours TFLite execution to a deterministic sine-based projection mapping, allowing testing without native binaries.
-
-### Environment Configuration
-Create a `.env` file at the project root:
+### Environment Variables
+Create a local `.env` file at the root:
 ```env
 EXPO_PUBLIC_AWS_REGION=ap-south-1
 EXPO_PUBLIC_S3_BUCKET=pehchaan-attendance-data
-EXPO_PUBLIC_AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
-EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_KEY
+EXPO_PUBLIC_AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
+EXPO_PUBLIC_AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
+```
+
+### Dependency Setup
+Run the following commands to install libraries:
+```bash
+npx expo install react-native-vision-camera expo-sqlite expo-image-manipulator expo-location expo-linear-gradient react-native-reanimated
 ```
 
 ---
 
-## 5. NHAI Use Cases & Ecosystem Fit
+## 👥 Contributors
 
-* **Toll Booth Shift Verification:** Plaza concessionaires can swap shifts and log attendance in milliseconds, ensuring no lane queues build up.
-* **Off-Grid Construction Sites:** Laborers working on remote highway stretches or tunnels can enroll and log attendance without network access.
-* **Contractor Manpower Auditing:** Geolocated biometric timestamps prevent contractors from inflating manual daily logsheets, ensuring transparent labor auditing.
-
----
-
-## 6. Contributors
-
-* **Mahak Mehadia**
-* **Parthiv Abhani**
-* **Shlok Vij**
+* 👨‍💻 **Mahak Mehadia**
+* 👨‍💻 **Parthiv Abhani**
+* 👨‍💻 **Shlok Vij**
