@@ -212,7 +212,12 @@ H --> I[☁️ AWS Sync]
 
 <div align="center">
 
-## 🇮🇳 Built for NHAI Hackathon 7.0
+## 🇮🇳 Built for NHAI Hackathon 7.0 by Team Semicolonists
+
+Members:
+- Aishi De
+- Parthiv Abhani
+- Shlok Vij
 
 ### Authenticate Anywhere. Trust Everywhere.
 
