@@ -2,22 +2,15 @@
   <img src="NHAIReadme.png" width="100%">
 </p>
 
-
-
 <div align="center">
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0F4C81,50:138808,100:FF9933&text=PEHCHAAN&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Offline%20Facial%20Authentication%20for%20Highway%20Field%20Personnel&descAlignY=60" />
 
 <div align="center">
 
-
-
 <p align="center">
 <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&duration=2500&pause=1000&color=FCBA03&center=true&vCenter=true&width=1000&lines=Offline+Facial+Authentication+%26+Attendance+System;Built+for+Smart+Workforce+Verification;Liveness+Detection+%7C+GPS+Verification;Edge+AI+%7C+TinyML+%7C+React+Native;Authenticate+Anywhere+%E2%80%A2+Trust+Everywhere;Built+for+NHAI+Hackathon+7.0">
 </p>
-
-
-
 
 <br>
 
@@ -32,7 +25,6 @@
   <img src="https://img.shields.io/badge/Platform-React%20Native-098723?style=for-the-badge&logo=react">
   <img src="https://img.shields.io/badge/AI-Face%20Recognition-046e19?style=for-the-badge">
 </p>
-
 <br>
 
 
