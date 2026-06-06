@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0F4C81,50:138808,100:FF9933&text=PEHCHAAN&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Offline%20Facial%20Authentication%20for%20Highway%20Field%20Personnel&descAlignY=60" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=blur&height=300&color=2c67ab&text=PEHCHAAN&desc=Offline%20facial%20authentication%20for%20highway%20field%20personnel&descAlignY=63&fontAlignY=47&fontColor=86b5eb" />
 
 <div align="center">
 
