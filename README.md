@@ -10,26 +10,30 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=36&duration=2500&pause=1200&color=FCBA03&center=true&vCenter=true&width=1100&lines=🚀+PEHECHAAN;Offline+Facial+Authentication+%26+Attendance+System;Built+for+Smart+Workforce+Verification;Authenticate+Anywhere.+Trust+Everywhere.;Built+for+NHAI+Hackathon+7.0" />
+
+
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&duration=2500&pause=1000&color=FCBA03&center=true&vCenter=true&width=1000&lines=Offline+Facial+Authentication+%26+Attendance+System;Built+for+Smart+Workforce+Verification;Liveness+Detection+%7C+GPS+Verification;Edge+AI+%7C+TinyML+%7C+React+Native;Authenticate+Anywhere+%E2%80%A2+Trust+Everywhere;Built+for+NHAI+Hackathon+7.0">
+</p>
+
+
+
 
 <br>
 
-![NHAI](https://img.shields.io/badge/NHAI-Hackathon%207.0-005BAC?style=for-the-badge)
-![React Native](https://img.shields.io/badge/React%20Native-Mobile%20App-61DAFB?style=for-the-badge&logo=react)
-![TensorFlow Lite](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=for-the-badge&logo=tensorflow)
-![Offline First](https://img.shields.io/badge/Offline-First-7B1FA2?style=for-the-badge)
-![Edge AI](https://img.shields.io/badge/Edge-AI-00C853?style=for-the-badge)
+![NHAI](https://img.shields.io/badge/NHAI-Hackathon%207.0-ed6707?style=for-the-badge)
+![React Native](https://img.shields.io/badge/React%20Native-Mobile%20App-f2873a?style=for-the-badge&logo=react)
+![Offline First](https://img.shields.io/badge/Offline-First-1177d6?style=for-the-badge)
+![Edge AI](https://img.shields.io/badge/Edge-AI-104ccc?style=for-the-badge)
 
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Hackathon-NHAI-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Platform-React%20Native-black?style=for-the-badge&logo=react">
-  <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js">
-  <img src="https://img.shields.io/badge/AI-Face%20Recognition-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Prototype-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-React%20Native-098723?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/AI-Face%20Recognition-046e19?style=for-the-badge">
 </p>
 
+<br>
 
 
 
