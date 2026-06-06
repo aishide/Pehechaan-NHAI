@@ -27,6 +27,9 @@
 </p>
 <br>
 
+<p align="center">
+  <img src="assets/road.svg" width="100%">
+</p>
 
 
 
@@ -38,15 +41,181 @@
 
 
 
+<p align="left">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="90"/>
+</p>
 
+# 🚀 Introducing PEHECHAAN
 
+### Offline Facial Authentication for the Modern Workforce
 
+PEHECHAAN is an AI-powered workforce authentication platform built for environments where traditional attendance systems fail.
+
+From remote highway projects and construction sites to large-scale infrastructure operations, workforce verification often suffers from unreliable internet connectivity, attendance fraud, and identity spoofing.
+
+PEHECHAAN addresses these challenges through a secure offline-first architecture powered by **Face Recognition**, **Liveness Detection**, **GPS Validation**, and **Edge AI**.
+
+---
+
+## ⚠️ Challenges in Traditional Workforce Authentication
+
+<table>
+<tr>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="60"/>
+
+### Poor Connectivity
+
+Authentication systems become unreliable in remote locations.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" width="60"/>
+
+### Identity Spoofing
+
+Photos and videos can bypass weak verification systems.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" width="60"/>
+
+### Proxy Attendance
+
+Workers can mark attendance on behalf of others.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="60"/>
+
+### Location Fraud
+
+Attendance can be recorded from unauthorized locations.
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## 💡 How PEHECHAAN Solves It
+
+<table>
+<tr>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" width="60"/>
+
+### Face Recognition
+
+Biometric identity verification using facial embeddings.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" width="60"/>
+
+### Liveness Detection
+
+Detects real users and prevents spoofing attacks.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="60"/>
+
+### GPS Validation
+
+Ensures workers are authenticated at approved locations.
+
+</td>
+
+<td align="center" width="25%">
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="60"/>
+
+### Offline First
+
+Authentication works without internet connectivity.
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## 🎯 PEHECHAAN AT A GLANCE
+
+<p align="center">
+
+| <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" width="35"> | <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" width="35"> | <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" width="35"> | <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="35"> | <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" width="35"> |
+|:---:|:---:|:---:|:---:|:---:|
+| Face Recognition | Liveness Detection | Secure Authentication | GPS Validation | Smart Sync |
+
+</p>
+
+---
+
+<div align="center">
+
+## 👷 ➜ 📸 ➜ 👁️ ➜ 🤖 ➜ 🔐 ➜ 📍 ➜ ☁️
+
+### Capture • Verify • Authenticate • Track • Sync
+
+</div>
+
+---
+
+## 🌟 Why PEHECHAAN?
+
+✅ Works completely offline
+
+✅ Prevents impersonation and attendance fraud
+
+✅ Verifies worker presence through liveness detection
+
+✅ Captures GPS-verified attendance
+
+✅ Synchronizes records automatically
+
+✅ Protects sensitive data through local processing
 
 ---
 
 <p align="center">
-  <img src="assets/road.svg" width="100%">
+  <img src="assets/face_scan.gif" width="900"/>
 </p>
+
+<div align="center">
+
+### Authenticate Anywhere • Trust Everywhere
+
+Built for real-world workforce authentication where connectivity cannot be guaranteed.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 🚀 About PEHECHAAN
 
@@ -728,18 +897,27 @@ Enterprise Deployment    ███░░░░░░░ 30%
 
 ---
 
+
+
+
+
+
+
+
+
+
 <p align="center">
 🏁━━━━━━━━━━━━━━ TEAM PEHECHAAN ━━━━━━━━━━━━━━🏁
 </p>
 
-# 👨‍💻 Team
+# ⚙️ Team
 
 <table align="center">
 <tr>
 
 <td align="center">
 
-### 👩‍💻 AISHI DE
+### 👩🏻‍💻 AISHI DE
 
 Frontend Development  
 UI/UX Design  
@@ -749,7 +927,7 @@ Documentation & Presentation
 
 <td align="center">
 
-### 👨‍💻 PARTHIV ABHANI
+### 🧑🏻‍💻 PARTHIV ABHANI
 
 Backend Development  
 System Architecture  
@@ -759,14 +937,13 @@ Integration
 
 <td align="center">
 
-### 🤖 SHLOK VIJ
+### 👨🏻‍💻 SHLOK VIJ
 
 AI/ML Development  
 Face Recognition  
 Liveness Detection
 
 </td>
-
 </tr>
 </table>
 
@@ -786,13 +963,7 @@ Liveness Detection
 
 <div align="center">
 
-# 🚀 PEHECHAAN
-
-### Authenticate Anywhere • Trust Everywhere
-
 Built with ❤️ for NHAI Hackathon 7.0
-
-### 👩‍💻 AISHI DE • 👨‍💻 PARTHIV ABHANI • 🤖 SHLOK VIJ
 
 </div>
 
